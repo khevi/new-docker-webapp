@@ -1,48 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Kossi DevOps Lab</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kossi DevOps World</title>
+
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       height: 100vh;
+      font-family: Arial, sans-serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+      background-size: cover;
+      background-position: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
-      background:
-        linear-gradient(rgba(0, 80, 0, 0.45), rgba(0, 0, 0, 0.65)),
-        url("https://upload.wikimedia.org/wikipedia/commons/2/24/United_States_one_dollar_bill%2C_obverse.jpg");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
+      overflow: hidden;
     }
 
-    .box {
-      background: rgba(0, 0, 0, 0.65);
-      padding: 50px;
-      border-radius: 20px;
-      border: 3px solid #3cff00;
-      box-shadow: 0 0 30px #3cff00;
+    .container {
+      text-align: center;
+      background: rgba(255,255,255,0.08);
+      padding: 60px;
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 0 30px rgba(0,255,170,0.4);
+      animation: float 4s ease-in-out infinite;
     }
 
     h1 {
       font-size: 70px;
-      margin: 0;
-      text-shadow: 0 0 15px #3cff00;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px #00ffae;
     }
 
     p {
       font-size: 24px;
-      color: #b6ff9c;
+      color: #d4fff1;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      background: #00ffae;
+      color: #000;
+      font-size: 20px;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #ffffff;
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #00ffae;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>I love Ekua Johnson, but she does care!!!</h1>
-    <p>Money is useful, but nature is priceless.</p>
+
+  <div class="container">
+    <h1>I Love Nature 🌿</h1>
+    <p>Kossi DevOps CI/CD Pipeline</p>
+
+    <a class="btn" href="#">
+      Explore Nature
+    </a>
   </div>
+
 </body>
 </html>
