@@ -25,12 +25,14 @@ pipeline {
             }
         }
 
-        stage('Deploy Container') {
+        stage('Deploy with Docker Compose') {
             steps {
-                sh '''
+               sh '''
                 ssh khevi@app-lab "
-                docker rm -f myweb 2>/dev/null || true &&
-                docker run -d -p 8080:80 --name myweb kossi-web
+                cd ~/new-docker-webapp &&
+                git pull &&
+                docker-compose down &&
+                docker-compose up -d --build
                 "
                 '''
             }
